@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "classpath://org/hibernate/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+        
+        <!--DB connection parameters -->
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@//129.100.9.202:1523/kra</property>
+        <property name="hibernate.connection.username">kra</property>
+        <property name="hibernate.connection.password">tracom</property>
+           
+        <!-- mapping properties -->
+        <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.c3p0.acquire_increment">1</property>
+        <property name="hibernate.c3p0.idle_test_period">60</property>
+        <property name="hibernate.c3p0.min_size">1</property>
+        <property name="hibernate.c3p0.max_size">2</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.timeout">0</property>
+        <property name="hibernate.c3p0.acquireRetryAttempts">2</property>
+        <property name="hibernate.c3p0.acquireRetryDelay">250</property>
+        <property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+        <property name="hibernate.connection.autocommit">false</property>
+                
+        <!-- List of XML mapping files -->
+        <mapping resource="ke/co/tracom/main/ResultsActivity.hbm.xml"/> 
+        <mapping resource="ke/co/tracom/main/Xswtch_Parameter.hbm.xml"/> 
+    
+    </session-factory>
+</hibernate-configuration>

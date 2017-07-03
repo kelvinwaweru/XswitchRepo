@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ke.co.tracom.main.ResultsActivity" table="ResultsActivity">
+        <id name="transNum" type="long">
+            <column name="TRANSNUM"/>
+            <generator class="assigned"/>
+        </id>
+               
+        <property name="transactionID" type="string">
+            <column name="TRANSACTIONID" />
+        </property>
+        
+        <property name="messageID" type="string">
+            <column name="MESSAGEID" />
+        </property>
+        
+        <property name="transactionDate" type="string">
+            <column name="TRANSACTIONDATE" />
+        </property>
+                
+        <property name="advised" type="long">
+            <column name="ADVISED" />
+        </property>
+        
+        <property name="conversationID" type="string">
+            <column name="CONVERSATIOND" />
+        </property>
+        
+        <property name="correlationID" type="string">
+            <column name="CORRELATIONID" />
+        </property>
+                   
+        <property name="destinationCode" type="string">
+            <column name="DESTINATIONCODE" />
+        </property>
+        
+        <property name="externalReference" type="string">
+            <column name="EXTERNALREFERENCE" />
+        </property>
+        
+        <property name="internalReference" type="string">
+            <column name="INTERNALREFERENCE" />
+        </property>
+                      
+        <property name="originatorConversationID" type="string">
+            <column name="ORIGINATORCONVERSATIONID" />
+        </property>
+                             
+        <property name="statusCode" type="string">
+            <column name="STATUSCODE" />
+        </property>
+                                      
+        <property name="statusDescription" type="string">
+            <column name="STATUSDESCRIPTION" />
+        </property>
+                                               
+        <property name="referenceData" type="string">
+            <column name="REFERENCEDATA" />
+        </property>
+                                               
+        <property name="parameters" type="string">
+            <column name="PARAMS" />
+        </property>
+         
+    </class>
+</hibernate-mapping>

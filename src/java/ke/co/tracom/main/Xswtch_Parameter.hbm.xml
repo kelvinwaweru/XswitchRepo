@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ke.co.tracom.main.Xswtch_Parameter" table="XSWITCH_PARAMETER">
+        <id name="tableIndex" type="long">
+            <column name="TABLE_INDEX"/>
+        </id>
+        <property name="paramName" type="string">
+            <column name="PARAM_NAME" />
+        </property>
+        <property name="paramValue" type="string">
+            <column name="PARAM_VALUE"/>
+        </property>
+        <property name="paramMisc" type="string">
+            <column name="PARAM_MISC"/>
+        </property>
+    </class>
+</hibernate-mapping>

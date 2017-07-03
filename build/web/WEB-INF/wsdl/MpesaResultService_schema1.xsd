@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://tracom.co.ke/ResultDetails" xmlns:tns="http://tracom.co.ke/ResultDetails" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="ErrorDetails_Exception" type="tns:ErrorDetails_Exception"/>
+
+  <xs:element name="mpesaResultDetails" type="tns:mpesaResultDetails"/>
+
+  <xs:element name="mpesaResultDetailsResponse" type="tns:mpesaResultDetailsResponse"/>
+
+  <xs:complexType name="mpesaResultDetails">
+    <xs:sequence>
+      <xs:element name="operationParameters" type="tns:operationParameters" form="qualified" minOccurs="0"/>
+      <xs:element name="referenceData" type="tns:referenceData" form="qualified" minOccurs="0"/>
+      <xs:element name="resultDetails" type="tns:resultDetails" form="qualified" minOccurs="0"/>
+      <xs:element name="parameters" type="tns:arrayOfParameter" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="operationParameters">
+    <xs:sequence>
+      <xs:element name="conversationID" type="xs:string" minOccurs="0"/>
+      <xs:element name="correlationID" type="xs:string" minOccurs="0"/>
+      <xs:element name="destinationCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="externalReference" type="xs:string" minOccurs="0"/>
+      <xs:element name="internalReference" type="xs:string" minOccurs="0"/>
+      <xs:element name="originatorConversationID" type="xs:string" minOccurs="0"/>
+      <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="statusDescription" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="referenceData">
+    <xs:sequence>
+      <xs:element name="refParameter" type="tns:parameter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="parameter">
+    <xs:sequence>
+      <xs:element name="key" type="xs:string" minOccurs="0"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="resultDetails">
+    <xs:sequence>
+      <xs:element name="messsageID" type="xs:string" minOccurs="0"/>
+      <xs:element name="transactionDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="transactionID" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="arrayOfParameter">
+    <xs:sequence>
+      <xs:element name="parameter" type="tns:parameter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mpesaResultDetailsResponse">
+    <xs:sequence>
+      <xs:element name="acknowledgement" type="tns:acknowledgement" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="acknowledgement">
+    <xs:sequence>
+      <xs:element name="messageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="messageDescription" type="xs:string" minOccurs="0"/>
+      <xs:element name="messageID" type="xs:string" minOccurs="0"/>
+      <xs:element name="transactionDate" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ErrorDetails_Exception">
+    <xs:sequence>
+      <xs:element name="faultInfo" type="tns:errorDetails" minOccurs="0"/>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="errorDetails">
+    <xs:sequence>
+      <xs:element name="errorCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="errorMessage" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
