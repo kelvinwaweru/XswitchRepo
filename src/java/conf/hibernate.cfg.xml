@@ -6,9 +6,9 @@
         <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
         
         <!--DB connection parameters -->
-        <property name="hibernate.connection.url">jdbc:oracle:thin:@//129.100.9.202:1523/kra</property>
-        <property name="hibernate.connection.username">kra</property>
-        <property name="hibernate.connection.password">tracom</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@//000.000.0.000:1521/service_name</property>
+        <property name="hibernate.connection.username">test_user</property>
+        <property name="hibernate.connection.password">test_password</property>
            
         <!-- mapping properties -->
         <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
