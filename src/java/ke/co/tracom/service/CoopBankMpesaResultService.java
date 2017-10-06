@@ -167,7 +167,6 @@ public class CoopBankMpesaResultService implements MpesaResultPort {
 //        System.out.println("WsUserName " + WsUserName);
 //        System.out.println("Wspassword " + Wspassword);
 
-//        return username.equals("postest") && password.equals("pos123");
         return username.equals(WsUserName) && password.equals(Wspassword);
     }
 
